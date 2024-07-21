@@ -63,7 +63,13 @@ body {
   color: var(--color-primary);
   font-size: var(--font-size);
   font-weight: var(--font-regular);
-  line-height: var(--font-lineheight);
+  /* line-height: var(--font-lineheight); */
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+main {
+  min-height: 70vh;
 }
 
 h1 {
@@ -92,7 +98,6 @@ h6 {
 
 a {
   color: var(--color-primary);
-  text-decoration: none;
 }
 
 a:hover:not(.button) {
@@ -203,16 +208,16 @@ legend {
 }
 
 input:not(
-    [type='checkbox'],
-    [type='radio'],
-    [type='submit'],
-    [type='color'],
-    [type='button'],
-    [type='reset']
+    [type="checkbox"],
+    [type="radio"],
+    [type="submit"],
+    [type="color"],
+    [type="button"],
+    [type="reset"]
   ),
 select,
 textarea,
-textarea[type='text'] {
+textarea[type="text"] {
   font-size: inherit;
   border-radius: var(--border-radius);
   border: 1px solid var(--color-primary);
@@ -229,9 +234,9 @@ select {
 }
 
 .button,
-[type='button'],
-[type='reset'],
-[type='submit'],
+[type="button"],
+[type="reset"],
+[type="submit"],
 button {
   font-size: inherit;
   padding: var(--padding-vertical) var(--padding-horizontal);
@@ -244,9 +249,9 @@ button {
 }
 
 .button:hover,
-[type='button']:hover,
-[type='reset']:hover,
-[type='submit']:hover,
+[type="button"]:hover,
+[type="reset"]:hover,
+[type="submit"]:hover,
 button:hover {
   opacity: 0.8;
 }
@@ -261,63 +266,63 @@ button:disabled:hover {
 
 :where(
     input:not(
-        [type='checkbox'],
-        [type='radio'],
-        [type='submit'],
-        [type='color'],
-        [type='button'],
-        [type='reset'],
+        [type="checkbox"],
+        [type="radio"],
+        [type="submit"],
+        [type="color"],
+        [type="button"],
+        [type="reset"],
         :disabled
       ),
     select,
     textarea,
-    textarea[type='text']
+    textarea[type="text"]
   ):hover {
   border-color: var(--color-primary);
 }
 
 input:not(
-    [type='checkbox'],
-    [type='radio'],
-    [type='submit'],
-    [type='color'],
-    [type='button'],
-    [type='reset']
+    [type="checkbox"],
+    [type="radio"],
+    [type="submit"],
+    [type="color"],
+    [type="button"],
+    [type="reset"]
   ):focus,
 select:focus,
 textarea:focus,
-textarea[type='text']:focus {
+textarea[type="text"]:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 2px var(--color-primary);
 }
 
 input.error:not(
-    [type='checkbox'],
-    [type='radio'],
-    [type='submit'],
-    [type='color'],
-    [type='button'],
-    [type='reset']
+    [type="checkbox"],
+    [type="radio"],
+    [type="submit"],
+    [type="color"],
+    [type="button"],
+    [type="reset"]
   ),
 textarea.error {
   border-color: var(--color-error);
 }
 
 input.success:not(
-    [type='checkbox'],
-    [type='radio'],
-    [type='submit'],
-    [type='color'],
-    [type='button'],
-    [type='reset']
+    [type="checkbox"],
+    [type="radio"],
+    [type="submit"],
+    [type="color"],
+    [type="button"],
+    [type="reset"]
   ),
 textarea.success {
   border-color: var(--color-success);
 }
 
-input[type='checkbox'],
-input[type='radio'] {
+input[type="checkbox"],
+input[type="radio"] {
   transform: scale(1.25);
   width: calc(var(--font-size));
   height: calc(var(--font-size));
