@@ -27,6 +27,8 @@
   --border-radius: var(--s-3);
   --padding-horizontal: var(--s-1);
   --padding-vertical: var(--s-3);
+  --body-margin: 5vw;
+  --min-body-height: 70vh;
 
   /* Animation */
   --transition-duration: 0.2s;
@@ -64,12 +66,12 @@ body {
   font-size: var(--font-size);
   font-weight: var(--font-regular);
   /* line-height: var(--font-lineheight); */
-  margin-left: 5vw;
-  margin-right: 5vw;
+  margin-left: var(--body-margin);
+  margin-right: var(--body-margin);
 }
 
 main {
-  min-height: 70vh;
+  min-height: var(--min-body-height);
 }
 
 h1 {

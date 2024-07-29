@@ -50,6 +50,57 @@
   }
 }
 
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.gallery {
+  position: relative;
+  display: flex;
+  --animation-time: 4s;
+
+  img {
+    max-height: 70vh;
+    min-width: calc(100vw - 10vw);
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-duration: calc(var(--animation-time) * 4);
+    margin-top: initial;
+    object-fit: cover;
+
+    &:not(:first-child) {
+      position: absolute;
+    }
+
+    &:nth-of-type(1) {
+      animation-delay: calc(var(--animation-time) * 3);
+    }
+    &:nth-of-type(2) {
+      animation-delay: calc(var(--animation-time) * 2);
+    }
+    &:nth-of-type(3) {
+      animation-delay: calc(var(--animation-time) * 1);
+    }
+    &:nth-of-type(4) {
+      animation-delay: calc(var(--animation-time) * 0);
+    }
+  }
+}
+
 footer {
   list-style: none;
 
